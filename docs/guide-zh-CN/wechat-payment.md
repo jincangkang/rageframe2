@@ -29,7 +29,7 @@ $result = $app->order->unify([
 
 if ($result['return_code'] == 'SUCCESS')
 {
-    $config = $payment->jssdk->sdkConfig($result['prepay_id']);
+    $config = $result->jssdk->sdkConfig($result['prepay_id']);
 }
 else
 {
